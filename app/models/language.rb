@@ -1,3 +1,4 @@
 class Language < ActiveRecord::Base
-  belongs_to :country
+  has_many :spoken_languages
+  has_many :countries, :through => :spoken_languages
 end
