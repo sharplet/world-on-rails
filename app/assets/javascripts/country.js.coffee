@@ -8,3 +8,6 @@ jQuery ->
       { aTargets: ['continent', 'population'], sWidth: '80px' }
       { aTargets: ['surface_area', 'internet_code'], sWidth: '100px' }
     ]
+    bProcessing: true
+    bServerSide: true
+    sAjaxSource: $('#countries').data('source')
