@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20121110053040) do
 
   create_table "countries", :force => true do |t|
     t.string   "name",                 :limit => 52, :default => "",     :null => false
-    t.string   "continent",            :limit => 0,  :default => "Asia", :null => false
+    t.string   "continent",            :limit => 13, :default => "Asia", :null => false
     t.string   "region",               :limit => 26, :default => "",     :null => false
     t.float    "surface_area",         :limit => 10, :default => 0.0,    :null => false
     t.integer  "year_of_independence", :limit => 2
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20121110053040) do
 
   create_table "spoken_languages", :id => false, :force => true do |t|
     t.string   "country_id",          :limit => 3, :default => "",  :null => false
-    t.string   "is_official",         :limit => 0, :default => "F", :null => false
+    t.string   "is_official",         :limit => 1, :default => "F", :null => false
     t.float    "percentage_speakers", :limit => 4, :default => 0.0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
