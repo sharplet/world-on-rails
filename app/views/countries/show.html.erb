@@ -1,0 +1,8 @@
+<p>&larr; <%= link_to 'Back to countries', countries_path %></p>
+<h1><%= @country.name %></h1>
+<% @country.attributes.each do |attr| %>
+  <p>
+    <span class="attribute"><%= pretty_attribute(attr[0]) %>:</span>
+    <span class="value"><%= pretty_value(attr[1]) %></span>
+  </p>
+<% end %>
