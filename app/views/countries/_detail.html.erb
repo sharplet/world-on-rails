@@ -1,0 +1,5 @@
+<h1><%= detail.name %></h1>
+
+<% detail.attributes.each do |attr| %>
+  <%= render :partial => 'shared/attribute', :object => attr %>
+<% end %>

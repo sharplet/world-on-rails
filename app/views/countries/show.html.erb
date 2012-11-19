@@ -2,8 +2,4 @@
   <span>&larr; Back to countries</span>
 <% end %></p>
 
-<h1><%= @country.name %></h1>
-
-<% @country.attributes.each do |attr| %>
-  <%= render :partial => 'shared/attribute', :object => attr %>
-<% end %>
+<%= render :partial => "detail", :object => @country %>
