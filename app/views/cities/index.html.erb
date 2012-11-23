@@ -1,0 +1,18 @@
+<p><%= link_to country_path(@country) do %>
+  <span>&larr; <%= @country.name %></span>
+<% end %></p>
+
+<h1>Cities in <%= @country.name %></h1>
+
+<table id="cities" class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th class="name">Name</th>
+      <th class="district">District</th>
+      <th class="population">Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @cities %>
+  </tbody>
+</table>

@@ -14,7 +14,9 @@ World::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Resource routes
-  resources :countries
+  resources :countries do
+    resources :cities
+  end
 
   # root
   root :to => 'countries#index'

@@ -2,4 +2,4 @@
   <span>&larr; Back to countries</span>
 <% end %></p>
 
-<%= render :partial => "detail", :object => @country %>
+<%= render :partial => "detail", :object => @country, :locals => { :country => @country } %>

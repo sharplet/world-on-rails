@@ -1,6 +1,4 @@
 jQuery ->
-  $('body').on('hidden', '.modal', -> $(this).removeData('modal'))
-
   $('tr[data-link]').click -> window.location = this.dataset.link
   $('tr[data-link]').hover(
     (-> $(this).find('td').addClass('highlighted')),
