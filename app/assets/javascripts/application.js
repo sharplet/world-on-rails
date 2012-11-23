@@ -16,6 +16,9 @@
 //= require dataTables/jquery.dataTables.bootstrap
 //= require bootstrap-modal
 //= require_tree .
-$('body').on('hidden', '.modal', function() {
-  $(this).removeData('modal')
+
+$(document).ready(function() {
+  $('body').on('hidden', '.modal', function() {
+    $(this).removeData('modal');
+  });
 });
