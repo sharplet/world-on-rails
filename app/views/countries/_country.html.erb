@@ -1,4 +1,4 @@
-<tr data-link="<%= country_path(country) %>">
+<tr href="#<%= modal %>" data-toggle="modal" data-remote="<%= country_path(country) %> #country-detail">
   <td><%= country.continent %></td>
   <td><%= country.name %></td>
   <td><%= country.region %></td>

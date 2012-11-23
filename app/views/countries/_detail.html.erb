@@ -1,5 +1,7 @@
-<h1><%= detail.name %></h1>
+<div id="country-detail">
+  <h1><%= detail.name %></h1>
 
-<% detail.attributes.each do |attr| %>
-  <%= render :partial => 'shared/attribute', :object => attr %>
-<% end %>
+  <% detail.attributes.each do |attr| %>
+    <%= render :partial => 'shared/attribute', :object => attr %>
+  <% end %>
+</div>
