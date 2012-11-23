@@ -2,6 +2,7 @@
   <h1><%= detail.name %></h1>
 
   <p><%= link_to "Cities in #{country.name}", country_cities_path(country) %></p>
+  <p><%= link_to "Languages spoken in #{country.name}", country_languages_path(country) %></p>
 
   <% detail.attributes.each do |attr| %>
     <%= render :partial => 'shared/attribute', :object => attr %>

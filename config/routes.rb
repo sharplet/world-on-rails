@@ -16,6 +16,7 @@ World::Application.routes.draw do
   # Resource routes
   resources :countries do
     resources :cities
+    resources :languages
   end
 
   # root
