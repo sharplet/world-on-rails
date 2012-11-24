@@ -21,6 +21,10 @@ World::Application.routes.draw do
 
   resources :users
 
+  match '/login' => 'sessions#new'
+  match '/logout' => 'sessions#destroy'
+  resources :sessions, :only => [:new, :create, :destroy]
+
   # root
   root :to => 'countries#index'
 end

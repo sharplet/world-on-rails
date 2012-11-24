@@ -26,7 +26,7 @@ module ApplicationHelper
       classes = [item[:class]]
       classes << 'active' if item[:name] == current
       html << "<li#{class_attribute(classes)}>"
-      html << link_to(item[:name], item[:link_options])
+      html << link_to(item[:name], item[:options])
       html << "</li>"
     end
     html
@@ -37,9 +37,19 @@ module ApplicationHelper
     end
   end
   def raw_nav_list
-    [
-      {:name => 'Home', :link_options => root_url},
-      {:name => 'Sign Up', :link_options => {:controller => 'users', :action => 'new'}, :class => 'pull-right'}
+    nav_list = [
+      {:name => 'Home', :options => root_url}
     ]
+
+    if current_user
+      nav_list.concat [
+        {:name => 'Log out', :options => '/logout', :class => 'pull-right'}
+      ]
+    else
+      nav_list.concat [
+        {:name => 'Sign up', :options => {:controller => 'users', :action => 'new'}, :class => 'pull-right'},
+        {:name => 'Log in', :options => '/login', :class => 'pull-right'}
+      ]
+    end
   end
 end
