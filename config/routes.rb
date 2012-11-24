@@ -19,7 +19,9 @@ World::Application.routes.draw do
     resources :languages
   end
 
-  resources :users
+  resources :users do
+    resources :countries
+  end
 
   match '/login' => 'sessions#new'
   match '/logout' => 'sessions#destroy'

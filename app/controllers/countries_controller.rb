@@ -1,6 +1,11 @@
 class CountriesController < ApplicationController
   def index
-    @countries = Country.order('continent, name')
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      @countries = @user.countries.order('continent','name')
+    else
+      @countries = Country.order('continent, name')
+    end
   end
 
   def show
