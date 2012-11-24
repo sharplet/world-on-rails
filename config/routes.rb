@@ -19,9 +19,8 @@ World::Application.routes.draw do
     resources :languages
   end
 
-  resources :users do
-    resources :countries
-  end
+  resources :users, :only => [:new, :create]
+  match '/:id/profile' => 'users#show', :as => :user_profile
 
   match '/login' => 'sessions#new'
   match '/logout' => 'sessions#destroy'

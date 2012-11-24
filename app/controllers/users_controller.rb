@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  def show
+    @user = User.find(params[:id])
+    @countries = @user.countries
+    render 'countries/index'
+  end
+
   def new
     @user = User.new
   end

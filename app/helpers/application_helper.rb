@@ -43,6 +43,7 @@ module ApplicationHelper
 
     if current_user
       nav_list.concat [
+        {:name => 'Profile', :options => user_profile_path(current_user.id)},
         {:name => 'Log out', :options => '/logout', :class => 'pull-right'}
       ]
     else
