@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123233834) do
+ActiveRecord::Schema.define(:version => 20121124050832) do
 
   create_table "cities", :force => true do |t|
     t.string   "name",       :limit => 35, :default => "", :null => false
@@ -38,6 +38,11 @@ ActiveRecord::Schema.define(:version => 20121123233834) do
     t.string   "internet_code",        :limit => 2,                      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "countries_users", :id => false, :force => true do |t|
+    t.string  "country_id", :null => false
+    t.integer "user_id",    :null => false
   end
 
   create_table "languages", :force => true do |t|
