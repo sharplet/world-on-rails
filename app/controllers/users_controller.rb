@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-    @countries = @user.countries
-    render 'countries/index'
+    if current_user && current_user.id == params[:id]
+      @user = User.find(params[:id])
+      @countries = @user.countries
+      render 'countries/index'
+    else
+      render :file => "#{Rails.root}/public/401.html", :status => :unauthorized
+    end
   end
 
   def new
