@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require dataTables/jquery.dataTables
 //= require dataTables/jquery.dataTables.bootstrap
-//= require bootstrap-modal
+//= require bootstrap
 //= require_tree .
 
 $(document).ready(function() {

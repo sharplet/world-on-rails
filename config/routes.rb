@@ -19,6 +19,8 @@ World::Application.routes.draw do
     resources :languages
   end
 
+  resources :users
+
   # root
   root :to => 'countries#index'
 end
