@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121124053431) do
+ActiveRecord::Schema.define(:version => 20121124070617) do
 
   create_table "cities", :force => true do |t|
     t.string   "name",       :limit => 35, :default => "", :null => false
@@ -40,11 +40,6 @@ ActiveRecord::Schema.define(:version => 20121124053431) do
     t.datetime "updated_at"
   end
 
-  create_table "countries_users", :id => false, :force => true do |t|
-    t.string  "country_id", :null => false
-    t.integer "user_id",    :null => false
-  end
-
   create_table "languages", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
@@ -64,6 +59,11 @@ ActiveRecord::Schema.define(:version => 20121124053431) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "watched_countries", :id => false, :force => true do |t|
+    t.string "user_id",    :null => false
+    t.string "country_id", :null => false
   end
 
 end
