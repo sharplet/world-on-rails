@@ -5,6 +5,6 @@
   <td><%= country.surface_area %></td>
   <td><%= country.population %></td>
   <td><%= country.local_name %></td>
-  <td><%= country.capital %></td>
+  <td><%= country.capital ? country.capital.name : '-' %></td>
   <td><%= country.internet_code %></td>
 </tr>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121124070617) do
+ActiveRecord::Schema.define(:version => 20121124100259) do
 
   create_table "cities", :force => true do |t|
     t.string   "name",       :limit => 35, :default => "", :null => false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20121124070617) do
     t.string   "local_name",           :limit => 45, :default => "",     :null => false
     t.string   "form_of_government",   :limit => 45, :default => "",     :null => false
     t.string   "head_of_state",        :limit => 60
-    t.integer  "capital"
+    t.integer  "capital_id"
     t.string   "internet_code",        :limit => 2,                      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
